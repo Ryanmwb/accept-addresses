@@ -74,4 +74,8 @@ module.exports = class MenuController {
     getContactCount(){
         return this.contacts.length;
     }
+
+    remind(){
+        return "Learning is a life-long pursuit."
+    }
 }

@@ -13,8 +13,12 @@ describe("MenuController", () => {
         });
 
         it("Should return 1 when there is exactly one contact in the book", () => {
-            menu.contacts.push("bob")
+            this.menu.contacts.push("bob")
             expect(this.menu.getContactCount()).toBe(1)
         });
+
+        it("Should return the string 'Learning is a life-long pursuit.'", () => {
+            expect(this.menu.remind()).toBe("Learning is a life-long pursuit.")
+        })
     });
 });
