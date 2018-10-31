@@ -70,4 +70,8 @@ module.exports = class MenuController {
     tellTime(){
         console.log('The time and date is --> '+ this.getDate)
     }
+
+    getContactCount(){
+        return this.contacts.length;
+    }
 }
