@@ -17,8 +17,15 @@ describe("MenuController", () => {
             expect(this.menu.getContactCount()).toBe(1)
         });
 
+    });
+
+    describe("#getRemind()", () => {
+        beforeEach(() => {
+            this.menu = new MenuController();
+        })
+
         it("Should return the string 'Learning is a life-long pursuit.'", () => {
-            expect(this.menu.remind()).toBe("Learning is a life-long pursuit.")
+            expect(this.menu.remind()).toBe("Learning is a life-long pursuit.");
         })
     });
 });
