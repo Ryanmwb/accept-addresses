@@ -11,8 +11,18 @@ module.exports = class MenuController {
                     "Add new contact", 
                     'Exit'
                 ]
+            },
+            {
+                type: 'list',
+                name: 'timeChoice',
+                message: 'Would you like to know the date and time?: ',
+                choices: [
+                    'Yes',
+                    'No'
+                ]
             }
         ];
+        this.getDate =  new Date(); //getHours()+":"+getMinutes()+" "+getMonth()+","+getDay()+","+getFullYear();
         this.contacts = [];
     }
 
@@ -29,6 +39,13 @@ module.exports = class MenuController {
                 console.log("Invalid input");
                 this.main();
             }
+        if(response.timeChoice == 'Yes'){
+            this.tellTime();
+            this.main();
+        }else if(response.timeChoice == 'No'){
+            console.log("then I won't tell you the time.")
+            this.main();
+        }
         })
         .catch((err) => {
             console.log(err);
@@ -48,5 +65,9 @@ module.exports = class MenuController {
     exit(){
         console.log('thanks for using AddressBloc!');
         process.exit();
+    }
+
+    tellTime(){
+        console.log('The time and date is --> '+ this.getDate)
     }
 }
