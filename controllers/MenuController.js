@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const ContactController = require("./ContactController")
 
 module.exports = class MenuController {
     constructor(){
@@ -22,8 +23,8 @@ module.exports = class MenuController {
                 ]
             }
         ];
-        this.getDate =  new Date(); //getHours()+":"+getMinutes()+" "+getMonth()+","+getDay()+","+getFullYear();
-        this.contacts = [];
+        this.getDate =  new Date(); 
+        this.book = new ContactController();
     }
 
     main(){

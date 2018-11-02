@@ -2,6 +2,11 @@ const MenuController = require('../controllers/MenuController');
 
 // #1
 describe("MenuController", () => {
+    describe("exists?", () => {
+        it("should be defined.", () => {
+            expect(MenuController).toBeDefined();
+        });
+    });
     describe("#getContactCount()", () => {
  // #2
         beforeEach(() => {
@@ -13,7 +18,7 @@ describe("MenuController", () => {
         });
 
         it("Should return 1 when there is exactly one contact in the book", () => {
-            menu.contacts.push("bob")
+            this.menu.book.addContact("Bob", "555-555-5555");
             expect(this.menu.getContactCount()).toBe(1)
         });
     });
