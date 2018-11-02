@@ -12,7 +12,7 @@ module.exports = class MenuController {
                     "Add new contact", 
                     'Exit'
                 ]
-            },
+            }/*,
             {
                 type: 'list',
                 name: 'timeChoice',
@@ -21,7 +21,7 @@ module.exports = class MenuController {
                     'Yes',
                     'No'
                 ]
-            }
+            }*/
         ];
         this.getDate =  new Date(); 
         this.book = new ContactController();
@@ -40,13 +40,13 @@ module.exports = class MenuController {
                 console.log("Invalid input");
                 this.main();
             }
-        if(response.timeChoice == 'Yes'){
+        /*if(response.timeChoice == 'Yes'){
             this.tellTime();
             this.main();
         }else if(response.timeChoice == 'No'){
             console.log("then I won't tell you the time.")
             this.main();
-        }
+        }*/
         })
         .catch((err) => {
             console.log(err);
