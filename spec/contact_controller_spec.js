@@ -93,7 +93,7 @@ describe("ContactController", () => {
                   });
                 })
             });
-
+            //this is failing
             it("should return the contact if found", (done) => {
                 this.book.addContact(...alloy).then(() => {
                   this.book.addContact(...magus).then(() => {
@@ -136,7 +136,7 @@ describe("ContactController", () => {
                     });
                     });
                 });
-            
+                // this is failing
                 it("should return the contact if found", (done) => {
                     this.book.addContact(...alloy)
                     .then(() => {
